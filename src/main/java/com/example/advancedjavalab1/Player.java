@@ -1,2 +1,4 @@
-package com.example.advancedjavalab1;public class Player {
+package com.example.advancedjavalab1;
+
+public class Player {
 }
