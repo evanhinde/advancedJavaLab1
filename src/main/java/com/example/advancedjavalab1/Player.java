@@ -6,7 +6,6 @@ import java.util.List;
 public class Player {
     //variables
     private String playerName;
-    private int playerNumber;
     private String team;
     private boolean isPitcher;
     private String position;
@@ -14,9 +13,8 @@ public class Player {
     //constructors
 
     //getters and setters
-    public Player(String playerName, int playerNumber, String team, boolean isPitcher, String position) {
+    public Player(String playerName, String team, boolean isPitcher, String position) {
         setPlayerName(playerName);
-        setPlayerNumber(playerNumber);
         setTeam(team);
         setIsPitcher(isPitcher);
         setPosition(position);
@@ -32,17 +30,6 @@ public class Player {
         } else {
             this.playerName = playerName;
         }
-    }
-
-    public int getPlayerNumber() {
-        return playerNumber;
-    }
-
-    public void setPlayerNumber(int playerNumber) {
-        if(playerNumber <=0) {
-            throw new IllegalArgumentException("Player must have number above zero");
-        }
-        this.playerNumber = playerNumber;
     }
 
     public String getTeam() {
@@ -105,6 +92,6 @@ public class Player {
     //toString
     @Override
     public String toString() {
-        return "You have created " + playerName + ", number " + playerNumber + ", a " + position + " who plays for the " + team;
+        return "You have created " + playerName + ", a " + position + " who plays for the " + team;
     }
 }
